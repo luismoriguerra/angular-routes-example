@@ -1,14 +1,30 @@
 <div class="p-4">
-  <div class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300">
+  <div
+    routerLink="/"
+    class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300"
+  >
     Insight dashboard
   </div>
-  <div class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300">
-    Leaderboard
+  <div
+    [routerLink]="['/leaderboard']"
+    routerLinkActive="router-link-active"
+    class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300"
+  >
+    <a routerLinkActive="router-link-active"> Leaderboard </a>
   </div>
-  <div class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300">
+
+  <div
+    [routerLink]="['/opportunities']"
+    routerLinkActive="router-link-active"
+    class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300"
+  >
     Opportunities
   </div>
-  <div class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300">
+  <div
+    [routerLink]="['/my-dashboard']"
+    routerLinkActive="router-link-active"
+    class="bg-gray-200 rounded-md p-2 mb-2 cursor-pointer hover:bg-gray-300"
+  >
     My Dashboard
   </div>
 </div>

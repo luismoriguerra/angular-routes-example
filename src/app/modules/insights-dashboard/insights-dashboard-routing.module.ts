@@ -3,9 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { InsightsDashboardComponent } from './insights-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: InsightsDashboardComponent },
+  // { path: '', component: InsightsDashboardComponent },
   {
-    path: 'foundation',
+    path: '',
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
+  {
+    path: 'foundation/:slug',
     loadChildren: () =>
       import('./modules/foundation/foundation.module').then(
         (m) => m.FoundationModule
