@@ -10,7 +10,12 @@
     <div class="tite">
       <a
         [routerLink]="['/foundation/cncf/overview']"
-        [queryParams]="{ projects: ['k8s'], pp: true }"
+        [queryParams]="{
+          projects: ['k8s'],
+          pp: true,
+          repositories: ['all'],
+          dateRange: ['this year']
+        }"
         class="text-blue-500"
         >kubernetes</a
       >
